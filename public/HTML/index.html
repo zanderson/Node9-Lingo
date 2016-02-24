@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="TranslateApp">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+  </head>
+  <body ng-controller="homeController">
+	  
+    <div class="container">
+      <h1>World Translator</h1>
+      <h2>Learn New Languages </h2>
+      <form id="translation-form" action="/" method="post">
+        <div class="form-group">
+          <input name="fromlanguage" type="text" placeholder="From Language" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <textarea name="tolanguage" rows="1" placeholder="To Language" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="word" rows="1" placeholder="Word (Enter Word)" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-default"/>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+
+    </div>
+	  
+	<script src="/javascripts/main.js"></script>
+  </body>
+</html>
