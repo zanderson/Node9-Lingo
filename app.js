@@ -5,9 +5,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 // var mongoose = require('mongoose');
+var googleTranslate = require('google-translate')('AIzaSyCdrIFSh2Dg-y_SXRsykIULblBGljj3Hd0');
 
 // Create Express App Object \\
 var app = express();
+
+
 
 // Application Configuration \\
 app.use(bodyParser.json());
@@ -29,6 +32,16 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
 	res.sendFile('html/index.html', {root : './public'});
 });
+
+app.post('/', function(req, res){
+	res.send('hello');
+});
+
+app.get('/api/translations', function(req, res) {
+	console.log(req.body);
+});
+
+
 
 // // displays a list of applicants
 // app.get('/applicants', function(req, res){
